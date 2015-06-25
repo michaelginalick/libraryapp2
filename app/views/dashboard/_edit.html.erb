@@ -1,0 +1,21 @@
+<div class="admin_update">
+  <table summary="Book Form Fields">
+    <tr>
+     <th><%= f.label(:title,"Title") %></th>
+     <td><%= f.text_field(:title) %></td>
+    </tr>
+    <tr>
+     <th><%= f.label(:author, "Author") %></th>
+     <td><%= f.text_field(:author) %></td>
+    </tr>
+    <tr>
+     <th><%= f.label(:genre, "Genre") %></th>
+     <td><%= f.text_field(:genre) %></td>
+    </tr>
+    <tr>
+     <th><%= f.label(:good_reads_id, "Good Reads Id") %></th>
+     <td><%= f.text_field(:good_reads_id) %></td>
+    </tr>
+   </table>
+   <class="cta-button"><a class="button"><%= submit_tag("Update Book!") %> </a>
+</div>   

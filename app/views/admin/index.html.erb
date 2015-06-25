@@ -1,0 +1,14 @@
+
+
+    <div class = "sign-in">
+        <%= form_for(:admin, :url => {:controller => 'dashboard', :action => 'admin_login'}) do |f|%>
+            <%= f.email_field :email, :size => 70, placeholder: 'Email' %>
+            <%= f.password_field :password, :size => 70, placeholder: 'Password' %>
+            <% flash.each do |name, msg| %>
+                <%= content_tag :div, msg, class: name %>
+            <% end %>
+          <button type="submit" class="button button-block"/>Admin Login</button>
+        <% end %>
+    </div>
+
+

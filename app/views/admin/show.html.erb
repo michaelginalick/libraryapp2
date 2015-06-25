@@ -1,0 +1,23 @@
+<p>Hello, <%=admin_user.email %></p>
+
+<div class="addBook">
+	<button class="button button-block round" /><%= link_to "Add a new book!", admin_add_book_path %></button>
+</div>	
+
+
+<%= render partial: "current_checkouts" %>
+
+<div class="books_status">
+	<p> There are currently <%= @current_checkouts.length %> book(s) checked out. </p>
+</div>
+
+
+
+<div class="books_number">
+	<p> You have <%= @books %> books in your library. </p>
+</div>
+
+
+<div class="book_info">
+	<p> <%= link_to "View all books", view_all_path %> </p>
+</div>

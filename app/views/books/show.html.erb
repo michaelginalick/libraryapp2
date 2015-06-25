@@ -1,0 +1,53 @@
+<div id="header-wrap">
+  <li>Hello, <%=current_user.username%></li>
+</div>
+
+
+<div class ="book_details">
+  <p>Title:</p> <h5>  <%= @book.title  %> </h5>
+  <p>Author:</p> <h5> <%= @book.author %> </h5>
+  <p>Genre:</p> <h5>  <%= @book.genre  %> </h5>
+  <p>Info: </p>  <h3> <%= show_dates   %> </h3>
+  <p> This book has been checked out:</p> <h4> <%=@book_checkouts %> time(s) </h4>
+</div>
+
+
+
+<div class="span_holder">
+  <span class="purple">Synopsis:</span>
+</div>  
+
+
+
+
+<div class="good_reads">
+  <% good_reads_data(@book_id) %>
+  <p> <%= strip_tags(formatted_string) %> </p> <br>
+  <div class="checkout_button">
+  <% if @book.checked_out? == true %>
+      <% if @user_checkouts.length > 0 %>
+        <button class="button button-block" /><a class="button" <%= link_to "Checkin",checkin_path(@book) %></button>
+      <%else %>
+        <button class="button button-block"  disabled />This book is currently checked out</button>
+      <%end%> 
+  <%else%>
+    <button class="button button-block"><a class="button" <%= link_to 'Checkout', checkout_path(@book) %></button>
+  <%end%>
+  </div>  
+</div>
+
+<div class="ratings">
+  <span class="blue">Good Reads Rating: </span><span class="orange"> <%= rating %> </span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

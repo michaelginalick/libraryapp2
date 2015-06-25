@@ -1,0 +1,12 @@
+<div class="dropdown">
+    <a href="#" class="button success" data-options="align:right" data-dropdown="drop">Books &raquo;</a>
+      <ul id="drop" class="large f-dropdown" data-dropdown-content>
+        <% if @user_checkouts.length == 0 %>
+          <li>You have no books currently checked out</li>
+        <%else%>
+          <% @user_checkouts.each do |checkout| %>
+            <li><%= link_to 'View Details', book_path(checkout.id) %><strong><%= checkout.title %></strong></li>
+          <%end%>
+        <%end%>  
+      </ul>
+</div>

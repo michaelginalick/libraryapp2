@@ -1,0 +1,25 @@
+<div id="header-wrap">
+  <li>Hello, <%=current_user.username%></li>
+</div>
+
+<%= form_tag books_path, method: "get" do %>
+  <%= text_field_tag :search, params[:search], :autofocus => true, :placeholder => "Search by Title, Author, Genre", :id => "bookSearch" %>
+<% end %>
+
+<div id="books">
+  <% if @user_search %>
+  	<%= render @user_search %>
+  <%else%>
+  	<%= will_paginate @books %>
+  <%end%>
+</div>
+
+<div class="dropdown">
+  <a data-dropdown="drop1" class="button success" aria-controls="drop1" aria-expanded="false">Your Books</a>
+  <ul id="drop1" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+     <% @user_checkouts.each do |checkout| %>
+            <li><%= link_to '', book_path(checkout.book) %><strong><%= checkout.book.title %></strong>--Details</li>
+         <%end%>
+  </ul>
+</div>
+

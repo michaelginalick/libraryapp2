@@ -1,0 +1,72 @@
+<div class="form">
+
+  <ul class="tab-group">
+    <li class="tab active"><a href="#signup">Sign Up</a></li>
+    <li class="tab"><a href="#login">Log In</a></li>
+  </ul>
+
+
+  <div class="tab-content">
+    <div id="signup">
+      <h1>Sign Up for Free</h1>
+      <%= form_for(:user, :url => {:controller => 'user', :action => 'create'}) do |f|%>
+          <div class="top-row">
+          <div class="field-wrap">
+              <%= f.text_field :username, :size => 70, placeholder: 'Username' %>
+          </div>
+
+          <div class="field-wrap">
+              <%= f.email_field :email, :size => 70, placeholder: 'Email' %>
+          </div>
+
+           <div class="field-wrap">
+              <%= f.email_field :phone, :type => 'tel', placeholder: 'Phone #' %>
+          </div>
+        </div>
+
+        <div class="field-wrap">
+            <%= f.password_field :password, :size => 70, placeholder: 'Password' %>
+        </div>
+
+        <div class="field-wrap">
+            <%= f.password_field :password, :size => 70, placeholder: 'Password Confirmation' %>
+        </div>
+
+
+          <% flash.each do |name, msg| %>
+              <%= content_tag :div, msg, class: name %>
+          <% end %>
+          <button type="submit" class="button button-block"/>Get Started</button>
+      <% end %>
+
+      </form>
+
+    </div>
+
+    <div id="login">
+      <h1>Welcome Back!</h1>
+
+      <%= form_for(:user, :url => {:controller => 'session', :action => 'login'}) do |f|%>
+
+
+        <div class="field-wrap">
+          <%= f.email_field :email, :size => 70, placeholder: 'Email' %>
+        </div>
+
+        <div class="field-wrap">
+          <%= f.password_field :password, :size => 70, placeholder: 'Password' %>
+        </div>
+          <% flash.each do |name, msg| %>
+              <%= content_tag :div, msg, class: name %>
+          <% end %>
+        <button class="button button-block"/>Enter</button>
+      <% end %>
+
+      </form>
+
+    </div>
+
+  </div><!-- tab-content -->
+
+</div> <!-- /form -->
+

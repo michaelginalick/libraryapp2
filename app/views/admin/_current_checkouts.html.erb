@@ -1,0 +1,12 @@
+<div class="admin_dropdown">
+    <a href="#" class="button success" data-options="align:right" data-dropdown="drop">Current Checkouts &raquo;</a>
+      <ul id="drop" class="large f-dropdown" data-dropdown-content>
+        <% if @current_checkouts.length == 0 %>
+          <li>There are no books checkedout</li>
+        <%else%>
+          <% @current_checkouts.each do |checkout| %>
+            <li id="checkout_id"><%= link_to 'View Details', view_checkedout_book_path(checkout.id), :"data-href" => checkout.id %><strong><%= checkout.title %></strong></li>
+          <%end%>
+        <%end%>  
+      </ul>
+</div> 

@@ -1,0 +1,17 @@
+<p>Hello, <%=current_user.username%></p>
+
+
+<%= form_tag books_path, method: "get" do %>
+  <%= text_field_tag :search, params[:search], :autofocus => true, :placeholder => "Search by Title, Author, Genre", :id => "bookSearch" %>
+<% end %>
+
+
+<div id="books">
+  <%= render @books %>
+</div>
+
+<%= will_paginate @books %>
+
+
+<%= render partial: "checkouts" %>
+

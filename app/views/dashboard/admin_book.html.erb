@@ -1,0 +1,16 @@
+<div class="backnew">
+<%= link_to 'Back', admin_index_path %>
+</div>
+
+<div class="xhr_book_info" >
+	<p><%= @book.title %> is currently checkedout by <%= @user.username %> It's due to be returned on <%= @checkout.due_date %></p> 
+</div>
+
+
+<%= form_tag admin_book_path, :method => 'get', :id => "products_search" do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+  <div id="products"><%= render 'products' %></div>
+<% end %>

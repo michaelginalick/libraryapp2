@@ -1,0 +1,33 @@
+<div id="header-wrap">
+  <li>Hello, <%=current_user.username%></li>
+</div>
+
+<%= form_tag books_path, method: "get" do %>
+  <%= text_field_tag :search, params[:search], :autofocus => true, :placeholder => "Search by Title, Author, Genre", :id => "bookSearch" %>
+<% end %>
+
+<div id="books">
+  <%= render @books %>
+</div>
+
+<%= will_paginate @books %>
+
+<div class="dropdown">
+  <%= render partial: "checkouts" %>
+</div>  
+
+
+<div class="dropdown_checkout">
+  <a href="#" data-dropdown="hover1" data-options="is_hover:true; hover_timeout:5000">Your Checkout History</a> 
+  <ul id="hover1" class="f-dropdown" data-dropdown-content>
+    <% if @user_checkout_history.length == 0 %>
+      <li>You need to read more!! </li>
+    <%else%>
+      <% @user_checkout_history.each do |history| %>
+      <li><%= link_to '', book_path(history.id) %><strong><%= history.title %></strong></li>
+      <%end%>
+    <%end%> 
+    </ul>
+</div>
+
+  

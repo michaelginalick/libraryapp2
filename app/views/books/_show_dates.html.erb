@@ -1,0 +1,11 @@
+<% if @book.checked_out? == true %>
+	<%  @book_checkouts.each do |checkout| %>
+		<%  if (checkout.user_id == @user.id && checkout.book_id == @book.id) %>
+   			<% return "Your due date is: " + checkout.due_date.to_s %>
+		<%  else  %> 
+   			<% return "This book is currently checked out" %>
+		<%  end %>
+	<% end %>
+<% else %> 
+	<% return start_date + " " +  due_date %>
+<% end %>
