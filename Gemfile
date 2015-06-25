@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.0'
+ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
@@ -36,7 +36,8 @@ gem 'will_paginate', '~> 3.0.7'
 gem "non-stupid-digest-assets"
 gem 'whenever', :require => false
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'foundation-rails'
+#gem 'foundation-rails'
+gem 'foundation-rails', '5.4.3.1'
 gem 'twilio-ruby'
 gem 'goodreads'
 
