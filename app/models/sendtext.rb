@@ -1,5 +1,3 @@
-require 'Date'
-
 class SendText
 
   def get_date
