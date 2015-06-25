@@ -70,7 +70,7 @@ GEM
       i18n (~> 0.5)
     ffi (1.9.8)
     ffi (1.9.8-x86-mingw32)
-    foundation-rails (5.4.5.0)
+    foundation-rails (5.4.3.1)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
     goodreads (0.3.0)
@@ -117,6 +117,7 @@ GEM
     non-stupid-digest-assets (1.0.4)
     oauth (0.4.7)
     pg (0.18.1)
+    pg (0.18.1-x86-mingw32)
     phantomjs (1.9.8.0)
     polyglot (0.3.5)
     protected_attributes (1.0.8)
@@ -242,7 +243,7 @@ DEPENDENCIES
   factory
   factory_girl (~> 4.4.0)
   faker
-  foundation-rails
+  foundation-rails (= 5.4.3.1)
   goodreads
   jasmine-rails
   jbuilder (~> 2.0)

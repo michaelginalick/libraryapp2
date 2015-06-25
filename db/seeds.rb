@@ -12,6 +12,4 @@ end
 
   admin = Admin.create(email: "admin@gmail.com", password: "mag42c84")
 
-  user = User.create(email: "michael@gmail.com", username: "mag42c", phone: "3145461424", password: "mag42c84", password_confirmation: "mag42c84")
-  user1 = User.create(email: "test@test.com", username: "mike", phone: "3145461424", password: "mag42c84", password_confirmation: "mag42c84")
-  
+ 
