@@ -72,6 +72,8 @@ class DashboardController < ApplicationController
   def view_all
     @books = Book.all
   end
+
+
                           
 
   protected
