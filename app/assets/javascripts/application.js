@@ -11,8 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require jquery.ui.all
 //= require login
 //= require admin
 //= require endless_scrolling
