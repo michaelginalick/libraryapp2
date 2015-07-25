@@ -20,7 +20,7 @@
           </div>
 
            <div class="field-wrap">
-              <%= f.email_field :phone, :type => 'tel', placeholder: 'Phone #' %>
+              <%= f.email_field :phone, :type => 'tel', placeholder: 'Phone #', id: 'phone' %>
           </div>
         </div>
 
@@ -36,7 +36,7 @@
           <% flash.each do |name, msg| %>
               <%= content_tag :div, msg, class: name %>
           <% end %>
-          <button type="submit" class="button button-block"/>Get Started</button>
+          <button type="submit" class="button button-block" id="new_user"/>Get Started</button>
       <% end %>
 
       </form>
