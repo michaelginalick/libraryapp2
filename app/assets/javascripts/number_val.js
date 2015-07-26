@@ -8,23 +8,19 @@ $(document).ready(function(){
 
 		$('#new_user').click(function(event){
 			if ($('#phone').val().charAt(0) === "1"){			
-				$('#signup').children().first().text("Area code and number only, please.");
-
+				$('#signup').children().first().text("Area code and number only. Please omit the 1.");
+				event.preventDefault();
+				restorePhoneDiv()
 			}
 
 		});
 
-		window.onbeforeunload = function() {
-    	window.localStorage.setItem(name, $('#username').val() );
-    	window.localStorage.setItem(email, $('#email').val() ); 
-		}
+		function restorePhoneDiv(){
+			setTimeout(
+				function() {
+					$('#signup').children().first().text("Sign Up for Free.");
+				},
+			4500);
+		};
 
-		window.onload = function() {
-    	var name = window.localStorage.getItem(name);
-    	var email = window.localStorage.getItem(email);
-    	if (name !== null) 
-    		$('#username').val(name);
-    	if (email !== null) 
-    		$('#email').val(email);
-		}
 });
