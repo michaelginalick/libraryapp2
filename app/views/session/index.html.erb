@@ -12,15 +12,15 @@
       <%= form_for(:user, :url => {:controller => 'user', :action => 'create'}) do |f|%>
           <div class="top-row">
           <div class="field-wrap">
-              <%= f.text_field :username, :size => 70, placeholder: 'Username' %>
+              <%= f.text_field :username, :size => 70, placeholder: 'Username', id: 'username' %>
           </div>
 
           <div class="field-wrap">
-              <%= f.email_field :email, :size => 70, placeholder: 'Email' %>
+              <%= f.email_field :email, :size => 70, placeholder: 'Email', id: 'email' %>
           </div>
 
            <div class="field-wrap">
-              <%= f.email_field :phone, :type => 'tel', placeholder: 'Phone #', id: 'phone' %>
+              <%= f.email_field :phone, :type => 'tel', placeholder: 'Phone #', id: 'phone', maxlength: 10 %>
           </div>
         </div>
 
