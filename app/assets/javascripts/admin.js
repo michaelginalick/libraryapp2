@@ -10,9 +10,8 @@ $(document).ready(function(){
 	 
 		$.get(url, function(response){
 				var jqObj = response;
-				var searchResults = $(jqObj).find(".header-wrap");
-				var x = searchResults['prevObject'][159].remove();
-				$('.book_info').append(searchResults['prevObject'][163]);
+				var searchResults = $(jqObj).find(".xhr_book_info");
+				$('.book_info').append(searchResults['prevObject'][87]);
 		 });
 		})
 	);

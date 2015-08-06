@@ -10,6 +10,6 @@ end
 
 
 
-  admin = Admin.create(email: "admin@gmail.com", password: "mag42c84")
+admin = Admin.create(email: "admin@gmail.com", password: "mag42c84")
 
  
