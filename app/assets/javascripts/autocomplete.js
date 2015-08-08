@@ -11,7 +11,6 @@ $(document).ready(function(){
 			 		search: searchContent
 			 	},
 			 		success: function(data){
-					  var searchResults = $(jqObj).find(".book");
 			 			response($.each(data, function(key, value) {
 			 		}))
 			 	}
