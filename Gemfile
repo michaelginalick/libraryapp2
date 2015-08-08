@@ -4,10 +4,10 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
 # Use postgresql as the database for Active Record
-gem 'pg'
+#gem 'pg'
 gem 'bcrypt', '~> 3.1.7'
 
-#gem 'sqlite3'
+gem 'sqlite3'
 gem 'protected_attributes'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -21,7 +21,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'simplecov'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-gem "jquery-ui-rails", "~> 4.0.5"
+gem "jquery-ui-rails"
 #gem "jquery-rails", "~> 2.3.0"
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 #gem 'turbolinks'

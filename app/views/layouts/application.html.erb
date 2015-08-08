@@ -3,18 +3,17 @@
   <link rel="stylesheets" href="bootstrap.css">
   <link rel="stylesheets" href="bootstrap.min.css">
   <script src="/assets/jquery.js" type="text/javascript"></script>
-    
+  <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
    <%= stylesheet_link_tag    'application', media: 'all'%> 
    <%= javascript_include_tag 'application' %> 
    <%= csrf_meta_tags %> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  
-
 </head>
 <body>
-    <div id="header-wrap">
+       <div id="header-wrap">
       <% if logged_in? %>
           <a href="/session/logout">Logout</a>
       <%end%>
@@ -23,7 +22,6 @@
           <a href="/dashboard/admin_logout">Logout</a>
       <% end %>
     </div>
-
     <%= yield %>
 </body>
 </html>
