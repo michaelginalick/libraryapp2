@@ -1,4 +1,5 @@
 class Book < ActiveRecord::Base
+  searchkick
   attr_accessible :title, :author, :genre, :good_reads_id, :checked_out?
 
   has_many :checkouts
