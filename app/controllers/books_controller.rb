@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  #book needs full crud functionality via the admin, not the user
+
   def index
     @user = User.find(session[:user_id])
 

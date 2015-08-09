@@ -11,7 +11,11 @@ $(document).ready(function(){
 			 		search: searchContent
 			 	},
 			 		success: function(data){
-			 			response($.each(data, function(key, value) {
+			 			response($.map(data.entities, function(item) {
+			 				return{
+			 					label: item.title,
+			 					value: item.author
+			 				}
 			 		}))
 			 	}
      })
