@@ -3,15 +3,13 @@ $(document).ready(function(){
 
 	$('#checkout_id').on("click", "a", (function(e){
 		e.preventDefault();
-	 
 	  $('.books_status').hide();
 	  $('.books_number').hide();
 	  var url = $(this).attr('href');
 	 
 		$.get(url, function(response){
-				var jqObj = response;
-				var searchResults = $(jqObj).find(".xhr_book_info");
-				$('.book_info').append(searchResults['prevObject'][87]);
+				var searchResults = $(response).filter(".xhr_book_info")[0];
+				$('.book_info').append(searchResults);
 		 });
 		})
 	);
