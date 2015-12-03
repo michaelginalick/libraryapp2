@@ -4,7 +4,7 @@
 ## Infinte scroll for easy viewing.
 ## Ajax search box that will filter based on user key strokes.
 ## Goodreads api calls to get book synopsis and user score.
-## twillio text message to remind users when thier book is due.
+## twillio text message to remind users when book is due.
 ## Admin login to track book activity.
 ## Admin crud functionality.
 ## CSV import for db seed
